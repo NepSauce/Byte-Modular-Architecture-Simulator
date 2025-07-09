@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\Memory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:Memory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\Memory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:Memory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\Memory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:Memory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +26,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Memory.cpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\Memory.cpp",
               "RelativeDocumentMoniker": "Memory.cpp",
@@ -34,18 +34,17 @@
               "RelativeToolTip": "Memory.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-09T20:09:55.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-09T20:09:55.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Memory.hpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\Memory.hpp",
               "RelativeDocumentMoniker": "Memory.hpp",
               "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\Memory.hpp",
               "RelativeToolTip": "Memory.hpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-07-09T19:40:56.804Z",
               "EditorCaption": ""

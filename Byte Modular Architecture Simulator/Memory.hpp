@@ -27,13 +27,13 @@ public:
     */
     void writeMem32Bit(uint32_t addr, uint32_t set);
     /*
-    * Reads one Bytes of memory
+    * Reads one Byte of memory
     * Parameters: uint8_t addr (Read Address)
     * Return: uint8_t (Byte Group at Address addr)
     */
     uint8_t readMem8Bit(uint8_t addr) const;
     /*
-    * Writes one Bytes to memory
+    * Writes one Byte to memory
     * Parameters: uint8_t addr (Read Address), uint8_t set (Set Value)
     */
     void writeMem8Bit(uint8_t addr, uint8_t set);
