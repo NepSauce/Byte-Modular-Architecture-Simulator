@@ -2,11 +2,11 @@
 
 /*
 MIPS Register Index Reference:
- 0: $zero     - Always 0
- 1: $at       - Assembler temporary
- 2-3: $v0-$v1 - Function return values
- 4-7: $a0-$a3 - Function arguments
- 8-15: $t0-$t7 - Temporaries
+ 0: $zero       - Always 0
+ 1: $at         - Assembler temporary
+ 2-3: $v0-$v1   - Function return values
+ 4-7: $a0-$a3   - Function arguments
+ 8-15: $t0-$t7  - Temporaries
  16-23: $s0-$s7 - Saved temporaries
  24-25: $t8-$t9 - More temporaries
  26-27: $k0-$k1 - Kernel reserved
