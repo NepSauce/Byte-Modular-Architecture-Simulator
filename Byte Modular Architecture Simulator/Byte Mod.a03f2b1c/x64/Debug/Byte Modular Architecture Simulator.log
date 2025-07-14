@@ -1,0 +1,7 @@
+﻿  EntrancePoint.cpp
+  MainMemory.cpp
+  RegisterFile.cpp
+  RegisterFile.hpp
+  Generating Code...
+Byte Mod.a03f2b1c\x64\Debug\RegisterFile.obj : warning LNK4042: object specified more than once; extras ignored
+  Byte Modular Architecture Simulator.vcxproj -> D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\x64\Debug\Byte Modular Architecture Simulator.exe

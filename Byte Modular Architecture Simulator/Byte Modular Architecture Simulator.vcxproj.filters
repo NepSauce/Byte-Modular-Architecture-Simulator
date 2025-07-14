@@ -15,8 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Memory.hpp">
+    <ClInclude Include="MainMemory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ALU.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterFile.hpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntrancePoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

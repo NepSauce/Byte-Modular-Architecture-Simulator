@@ -123,10 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Memory.hpp" />
+    <ClInclude Include="ALU.hpp" />
+    <ClInclude Include="MainMemory.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="EntrancePoint.cpp" />
+    <ClCompile Include="MainMemory.cpp" />
+    <ClCompile Include="RegisterFile.cpp" />
+    <ClCompile Include="RegisterFile.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
