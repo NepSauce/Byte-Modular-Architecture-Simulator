@@ -16,4 +16,13 @@ enum class ALUOp {
     ALU_OP_SLT = 0x09  // Set on less than
 };
 
+class ALU {
+public:
+    uint32_t execute(uint32_t a, uint32_t b, ALUOp op);
+    bool zeroFlag() const;
+
+private:
+    bool zero;
+};
+
 #endif 
