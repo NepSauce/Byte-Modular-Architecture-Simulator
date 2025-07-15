@@ -18,7 +18,7 @@ enum class ALUOp {
 
 class ALU {
 public:
-    uint32_t execute(uint32_t a, uint32_t b, ALUOp op);
+    uint32_t execute(uint32_t inputA, uint32_t inputB, ALUOp op);
     bool zeroFlag() const;
 
 private:

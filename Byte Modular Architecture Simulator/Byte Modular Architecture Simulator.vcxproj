@@ -127,6 +127,7 @@
     <ClInclude Include="MainMemory.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ALU.cpp" />
     <ClCompile Include="EntrancePoint.cpp" />
     <ClCompile Include="MainMemory.cpp" />
     <ClCompile Include="RegisterFile.cpp" />
