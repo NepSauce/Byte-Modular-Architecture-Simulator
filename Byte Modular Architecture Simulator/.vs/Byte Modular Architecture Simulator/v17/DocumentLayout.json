@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "ALU.cpp",
               "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.cpp",
               "RelativeToolTip": "ALU.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-15T01:30:07.128Z",
               "EditorCaption": ""
@@ -100,8 +100,7 @@
               "RelativeToolTip": "RegisterFile.cpp",
               "ViewState": "AgIAACcAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-11T19:14:05.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T19:14:05.587Z"
             },
             {
               "$type": "Document",
