@@ -1,7 +1,15 @@
-﻿  EntrancePoint.cpp
+﻿  ALU.cpp
+  EntrancePoint.cpp
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(22,16): error C2838: 'ALU': illegal qualified name in member declaration
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(23,1): error C2143: syntax error: missing ':' before '}'
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(22,16): error C2275: 'ALU': expected an expression instead of a type
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(22,16): error C2440: 'type cast': cannot convert from 'ALU' to 'ALUOp'
+      D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(22,16):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(22,4): error C2046: illegal case
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(23,1): error C2059: syntax error: '}'
+D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\ALU.cpp(3,67): error C1075: '{': no matching token found
   MainMemory.cpp
   RegisterFile.cpp
-  RegisterFile.hpp
   Generating Code...
-Byte Mod.a03f2b1c\x64\Debug\RegisterFile.obj : warning LNK4042: object specified more than once; extras ignored
-  Byte Modular Architecture Simulator.vcxproj -> D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\x64\Debug\Byte Modular Architecture Simulator.exe
