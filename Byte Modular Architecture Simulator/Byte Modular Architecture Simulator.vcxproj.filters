@@ -21,6 +21,9 @@
     <ClInclude Include="ALU.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ControlUnit.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainMemory.cpp">

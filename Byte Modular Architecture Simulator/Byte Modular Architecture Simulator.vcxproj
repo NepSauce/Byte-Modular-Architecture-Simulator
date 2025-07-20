@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ALU.hpp" />
+    <ClInclude Include="ControlUnit.hpp" />
     <ClInclude Include="MainMemory.hpp" />
   </ItemGroup>
   <ItemGroup>
