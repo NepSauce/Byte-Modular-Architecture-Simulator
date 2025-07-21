@@ -13,7 +13,10 @@ enum class ALUOp {
     ALU_OP_SHL = 0x06, // Shift Left Logical
     ALU_OP_SHR = 0x07, // Shift Right Logical
     ALU_OP_SRA = 0x08, // Shift Right Arithmetic
-    ALU_OP_SLT = 0x09  // Set on less than
+    ALU_OP_SLT = 0x09,  // Set on less than
+    ALU_OP_SLL = 0x0A, // Shift Left Logical
+    ALU_OP_SRL = 0x0B, // Shift Right Logical
+    ALU_OP_NOR = 0x0C  // Bitwise NOR
 };
 
 class ALU {
