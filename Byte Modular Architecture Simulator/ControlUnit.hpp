@@ -26,6 +26,6 @@ struct ControlSignals {
 
 class ControlUnit {
 public:
-    ControlSignals decode(uint8_t opcode);
+    ControlSignals generateControl(uint8_t opcode, uint8_t funct = 0);
 };
 #endif 
