@@ -4,12 +4,15 @@
 #include <cstdint>
 
 enum class ALUControl {
-	ADD,
-	SUB,
-	AND,
-	OR,
-	SLT,
-	NOP
+    ADD,
+    SUB,
+    AND,
+    OR,
+    SLT,
+    NOR,
+    SLL,
+    SRL,
+    NOP
 };
 
 struct ControlSignals {
