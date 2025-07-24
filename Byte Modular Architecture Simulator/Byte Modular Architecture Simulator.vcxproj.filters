@@ -47,5 +47,8 @@
     <ClCompile Include="SingleCycleCPU.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="SingleCycleCPU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

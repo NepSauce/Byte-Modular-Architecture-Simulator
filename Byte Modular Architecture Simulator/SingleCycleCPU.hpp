@@ -18,7 +18,7 @@ private:
 	ALU alu;
 	ControlUnit controlUnit;
 public:
-	SingleCycleCPU(MainMemory& memory, RegisterFile& regFile);
+	SingleCycleCPU(MainMemory& mem, RegisterFile& reg);
 
 	void reset();
 	void step();

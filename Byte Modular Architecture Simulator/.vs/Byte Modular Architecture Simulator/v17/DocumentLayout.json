@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\SingleCycleCPU.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:SingleCycleCPU.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\SingleCycleCPU.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:SingleCycleCPU.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\EntrancePoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:EntrancePoint.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ControlUnit.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:ControlUnit.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:ALU.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\RegisterFile.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:RegisterFile.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,6 +21,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\MainMemory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:MainMemory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\RegisterFile.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A03F2B1C-9A53-4943-AC04-68F2BD0A53D6}|Byte Modular Architecture Simulator.vcxproj|solutionrelative:RegisterFile.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,15 +34,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SingleCycleCPU.cpp",
+              "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\SingleCycleCPU.cpp",
+              "RelativeDocumentMoniker": "SingleCycleCPU.cpp",
+              "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\SingleCycleCPU.cpp",
+              "RelativeToolTip": "SingleCycleCPU.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-24T13:21:43.405Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SingleCycleCPU.hpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\SingleCycleCPU.hpp",
               "RelativeDocumentMoniker": "SingleCycleCPU.hpp",
@@ -58,51 +63,12 @@
               "RelativeToolTip": "SingleCycleCPU.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-24T13:06:13.166Z",
+              "WhenOpened": "2025-07-24T13:18:18.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ControlUnit.cpp",
-              "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ControlUnit.cpp",
-              "RelativeDocumentMoniker": "ControlUnit.cpp",
-              "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ControlUnit.cpp",
-              "RelativeToolTip": "ControlUnit.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-24T13:05:42.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ALU.cpp",
-              "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.cpp",
-              "RelativeDocumentMoniker": "ALU.cpp",
-              "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.cpp",
-              "RelativeToolTip": "ALU.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-24T13:05:40.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EntrancePoint.cpp",
-              "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\EntrancePoint.cpp",
-              "RelativeDocumentMoniker": "EntrancePoint.cpp",
-              "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\EntrancePoint.cpp",
-              "RelativeToolTip": "EntrancePoint.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-24T11:52:01.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegisterFile.hpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\RegisterFile.hpp",
               "RelativeDocumentMoniker": "RegisterFile.hpp",
@@ -110,12 +76,12 @@
               "RelativeToolTip": "RegisterFile.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-24T11:49:53.018Z",
+              "WhenOpened": "2025-07-24T13:18:17.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "MainMemory.hpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\MainMemory.hpp",
               "RelativeDocumentMoniker": "MainMemory.hpp",
@@ -123,31 +89,33 @@
               "RelativeToolTip": "MainMemory.hpp",
               "ViewState": "AgIAAAIAAAAAAAAAAAAYwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-24T11:49:52.459Z"
+              "WhenOpened": "2025-07-24T11:49:52.459Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "ControlUnit.hpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ControlUnit.hpp",
               "RelativeDocumentMoniker": "ControlUnit.hpp",
               "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ControlUnit.hpp",
               "RelativeToolTip": "ControlUnit.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-24T11:49:51.93Z"
+              "WhenOpened": "2025-07-24T11:49:51.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "ALU.hpp",
               "DocumentMoniker": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.hpp",
               "RelativeDocumentMoniker": "ALU.hpp",
               "ToolTip": "D:\\Homework\\NewGit\\ComputerArchitecture\\Byte-Modular-Architecture-Simulator\\Byte Modular Architecture Simulator\\ALU.hpp",
               "RelativeToolTip": "ALU.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-24T11:49:51.391Z",
+              "WhenOpened": "2025-07-24T13:18:15.827Z",
               "EditorCaption": ""
             }
           ]
