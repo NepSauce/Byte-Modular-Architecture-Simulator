@@ -1,19 +1,10 @@
 #ifndef CONTROL_UNIT_HPP
 #define CONTROL_UNIT_HPP
 
+#include "ALU.hpp"
+
 #include <cstdint>
 
-enum class ALUControl {
-    ADD,
-    SUB,
-    AND,
-    OR,
-    SLT,
-    NOR,
-    SLL,
-    SRL,
-    NOP
-};
 
 struct ControlSignals {
     bool regDst;       // 1 = use rd, 0 = use rt (dest register)
@@ -24,7 +15,7 @@ struct ControlSignals {
     bool memWrite;     // Enable memory write
     bool branch;       // Branch instruction (beq)
     bool jump;         // Jump instruction (j)
-    ALUControl ALUOp;  // ALU operation selector
+    ALUOp ALUOp;       // ALU operation selector
 };
 
 class ControlUnit {
