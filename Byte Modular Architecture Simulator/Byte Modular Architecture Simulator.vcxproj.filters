@@ -24,6 +24,9 @@
     <ClInclude Include="ControlUnit.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Assembler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainMemory.cpp">
@@ -44,10 +47,13 @@
     <ClCompile Include="ControlUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SingleCycleCPU.hpp">
+    <ClCompile Include="CPU.hpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="SingleCycleCPU.cpp">
+    <ClCompile Include="CPU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Assembler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

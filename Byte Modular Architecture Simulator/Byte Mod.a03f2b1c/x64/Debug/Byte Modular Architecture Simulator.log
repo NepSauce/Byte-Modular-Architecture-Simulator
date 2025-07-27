@@ -1,12 +1,2 @@
-﻿  ALU.cpp
-  ControlUnit.cpp
-  EntrancePoint.cpp
-D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\EntrancePoint.cpp(27,18): warning C4566: character represented by universal-character-name '\u2705' cannot be represented in the current code page (1252)
-D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\EntrancePoint.cpp(43,18): warning C4566: character represented by universal-character-name '\u2705' cannot be represented in the current code page (1252)
-D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\EntrancePoint.cpp(63,18): warning C4566: character represented by universal-character-name '\u2705' cannot be represented in the current code page (1252)
-D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\EntrancePoint.cpp(92,18): warning C4566: character represented by universal-character-name '\u2705' cannot be represented in the current code page (1252)
-D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\EntrancePoint.cpp(101,18): warning C4566: character represented by universal-character-name '\u2705' cannot be represented in the current code page (1252)
-  RegisterFile.cpp
-  Generating Code...
-Byte Mod.a03f2b1c\x64\Debug\RegisterFile.obj : warning LNK4042: object specified more than once; extras ignored
+﻿  CPU.cpp
   Byte Modular Architecture Simulator.vcxproj -> D:\Homework\NewGit\ComputerArchitecture\Byte-Modular-Architecture-Simulator\Byte Modular Architecture Simulator\x64\Debug\Byte Modular Architecture Simulator.exe
