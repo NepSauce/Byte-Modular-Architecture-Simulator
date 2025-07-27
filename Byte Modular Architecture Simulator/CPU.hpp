@@ -1,42 +1,27 @@
-#ifndef CPU_HPP  
-#define CPU_HPP  
+#pragma once
+#include <cstdint>
+#include "RegisterFile.hpp"
+#include "MainMemory.hpp"
+#include "ControlUnit.hpp"
 
-#include "RegisterFile.hpp"  
-#include "MainMemory.hpp"  
-#include "ControlUnit.hpp"  
-#include "ALU.hpp"  
-#include <cstdint>  
-#include <vector>  
+class CPU {
+public:
+    CPU(MainMemory& mem, RegisterFile& rf);
 
-class CPU {  
-private:  
-    RegisterFile registers;  
-    MainMemory memory;  
-    ControlUnit controlUnit;  
-    ALU alu;  
+    void reset();
+    void loadInstruction(uint32_t addr, uint32_t instruction); // Load hex instruction into memory
+    void runNextInstruction(); // Fetch, decode, execute 1 instruction
+    uint32_t getPC() const;
+    std::array<uint32_t, 32> getRegisters() const;
 
-    uint32_t PC;  // Program Counter  
+private:
+    uint32_t pc;
+    MainMemory& memory;
+    RegisterFile& regFile;
+    ControlUnit controlUnit;
 
-public:  
-    CPU();  
-
-    // Run one instruction cycle: fetch, decode, execute, memory, writeback  
-    void step();  
-
-    // For testing/debugging: set PC  
-    void setPC(uint32_t addr);  
-
-    // For testing/debugging: get PC  
-    uint32_t getPC() const;  
-
-    // For testing/debugging: access registers  
-    uint32_t readRegister(uint8_t regNum) const;  
-
-    // For testing/debugging: access memory  
-    uint32_t readMemory(uint32_t addr) const;  
-
-    // Load a program into memory  
-    void loadProgram(const std::vector<uint32_t>& program);  
-};  
-
-#endif
+    uint32_t signExtend16(uint16_t val);
+    void executeRType(uint32_t instruction, const ControlSignals& ctrl);
+    void executeIType(uint32_t instruction, const ControlSignals& ctrl);
+    void executeJType(uint32_t instruction, const ControlSignals& ctrl);
+};

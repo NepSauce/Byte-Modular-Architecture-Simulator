@@ -1,122 +1,161 @@
-// CPU.cpp
 #include "CPU.hpp"
 #include <iostream>
-#include <iomanip>
 
-// Constructor initializes PC to zero
-CPU::CPU() : PC(0) {}
+CPU::CPU(MainMemory& mem, RegisterFile& rf)
+    : pc(0), memory(mem), regFile(rf) {
+}
 
-// Set PC externally
-void CPU::setPC(uint32_t addr) {
-    PC = addr;
+void CPU::reset() {
+    pc = 0;
+    regFile.resetAllReg();
+}
+
+void CPU::loadInstruction(uint32_t addr, uint32_t instruction) {
+    memory.writeMem32Bit(addr, instruction);
 }
 
 uint32_t CPU::getPC() const {
-    return PC;
+    return pc;
 }
 
-uint32_t CPU::readRegister(uint8_t regNum) const {
-    return registers.readReg(regNum);
+uint32_t CPU::signExtend16(uint16_t val) {
+    // Sign-extend 16-bit immediate to 32-bit
+    if (val & 0x8000) {
+        return 0xFFFF0000 | val;
+    }
+    return val;
 }
 
-uint32_t CPU::readMemory(uint32_t addr) const {
-    return memory.readMem32Bit(addr);
-}
+void CPU::runNextInstruction() {
+    uint32_t instr = memory.readMem32Bit(pc);
 
-void CPU::step() {
-    // 1. FETCH instruction (32-bit) from memory at PC
-    uint32_t instruction = memory.readMem32Bit(PC);
+    uint8_t opcode = (instr >> 26) & 0x3F;
+    uint8_t rs = (instr >> 21) & 0x1F;
+    uint8_t rt = (instr >> 16) & 0x1F;
+    uint8_t rd = (instr >> 11) & 0x1F;
+    uint8_t shamt = (instr >> 6) & 0x1F;
+    uint8_t funct = instr & 0x3F;
+    uint16_t immediate = instr & 0xFFFF;
+    uint32_t address = instr & 0x03FFFFFF;
 
-    // Print PC and raw instruction
-    std::cout << "PC = 0x" << std::hex << PC
-        << " | Instruction = 0x" << std::setw(8) << std::setfill('0') << instruction << std::dec << "\n";
-
-    // Extract fields from instruction
-    uint8_t opcode = (instruction >> 26) & 0x3F;  // bits 31-26
-    uint8_t rs = (instruction >> 21) & 0x1F;     // bits 25-21
-    uint8_t rt = (instruction >> 16) & 0x1F;     // bits 20-16
-    uint8_t rd = (instruction >> 11) & 0x1F;     // bits 15-11
-    uint8_t shamt = (instruction >> 6) & 0x1F;   // bits 10-6
-    uint8_t funct = instruction & 0x3F;          // bits 5-0
-    int16_t imm = instruction & 0xFFFF;          // bits 15-0 immediate
-    uint32_t addr = instruction & 0x3FFFFFF;     // bits 25-0 (jump address)
-
-    // Print decoded fields
-    std::cout << "opcode=" << (int)opcode << " rs=$" << (int)rs << " rt=$" << (int)rt
-        << " rd=$" << (int)rd << " shamt=" << (int)shamt << " funct=0x" << std::hex << (int)funct << std::dec << "\n";
-    std::cout << "imm=" << imm << " addr=0x" << std::hex << addr << std::dec << "\n";
-
-    // 2. Generate control signals
     ControlSignals ctrl = controlUnit.generateControl(opcode, funct);
 
-    // 3. Read registers
-    uint32_t regRsVal = registers.readReg(rs);
-    uint32_t regRtVal = registers.readReg(rt);
-    std::cout << "Read Registers: $" << (int)rs << "=" << regRsVal << ", $" << (int)rt << "=" << regRtVal << "\n";
+    // Debug output
+    std::cout << "PC: 0x" << std::hex << pc << " Instruction: 0x" << instr << std::dec << std::endl;
 
-    // 4. Determine ALU input B
-    uint32_t aluInputB = ctrl.aluSrc ? static_cast<int32_t>(imm) : regRtVal;
-    std::cout << "ALU Inputs: A=" << regRsVal << ", B=" << aluInputB << "\n";
-
-    // 5. Select destination register
-    uint8_t writeReg = ctrl.regDst ? rd : rt;
-
-    // 6. ALU operation
-    uint32_t aluResult = alu.execute(regRsVal, aluInputB, ctrl.ALUOp);
-    std::cout << "ALU Result = " << aluResult << " | Zero flag = " << alu.zeroFlag() << "\n";
-
-    // 7. Branch decision
-    bool takeBranch = ctrl.branch && alu.zeroFlag();
-    std::cout << "Branch: " << (takeBranch ? "TAKEN" : "NOT taken") << "\n";
-
-    // 8. Memory operations
-    uint32_t memData = 0;
-    if (ctrl.memRead) {
-        memData = memory.readMem32Bit(aluResult);
-        std::cout << "Memory Read: Address=0x" << std::hex << aluResult << std::dec << " Data=" << memData << "\n";
+    if (opcode == 0x00) {
+        // R-Type
+        executeRType(instr, ctrl);
+        pc += 4;
     }
-    if (ctrl.memWrite) {
-        memory.writeMem32Bit(aluResult, regRtVal);
-        std::cout << "Memory Write: Address=0x" << std::hex << aluResult << std::dec << " Data=" << regRtVal << "\n";
+    else if (opcode == 0x02) {
+        // Jump
+        executeJType(instr, ctrl);
     }
-
-    // 9. Write back to register if enabled
-    if (ctrl.regWrite) {
-        uint32_t writeData = ctrl.memToReg ? memData : aluResult;
-        if (writeReg != 0) {  // Register 0 is always zero in MIPS
-            registers.writeReg(writeReg, writeData);
-            std::cout << "Write Register: $" << (int)writeReg << " = " << writeData << "\n";
-        }
+    else {
+        // I-Type (lw, sw, beq)
+        executeIType(instr, ctrl);
     }
-
-    // 10. Update PC
-    uint32_t oldPC = PC;
-    PC += 4;  // Default next instruction
-
-    if (takeBranch) {
-        int32_t branchOffset = static_cast<int32_t>(imm) << 2;
-        PC += branchOffset;
-        std::cout << "Branch taken. PC updated by offset: " << branchOffset << "\n";
-    }
-
-    if (ctrl.jump) {
-        PC = (oldPC & 0xF0000000) | (addr << 2);
-        std::cout << "Jump taken. PC set to: 0x" << std::hex << PC << std::dec << "\n";
-    }
-
-    std::cout << "Next PC = 0x" << std::hex << PC << std::dec << "\n";
-    std::cout << "----------------------------------------\n";
 }
 
-void CPU::loadProgram(const std::vector<uint32_t>& program) {
-    // Load each 32-bit instruction as 4 bytes into memory starting at address 0
-    uint32_t addr = 0;
-    for (uint32_t instr : program) {
-        memory.writeMem8Bit(addr, (instr >> 24) & 0xFF);
-        memory.writeMem8Bit(addr + 1, (instr >> 16) & 0xFF);
-        memory.writeMem8Bit(addr + 2, (instr >> 8) & 0xFF);
-        memory.writeMem8Bit(addr + 3, instr & 0xFF);
-        addr += 4;
+void CPU::executeRType(uint32_t instr, const ControlSignals& ctrl) {
+    uint8_t rs = (instr >> 21) & 0x1F;
+    uint8_t rt = (instr >> 16) & 0x1F;
+    uint8_t rd = (instr >> 11) & 0x1F;
+    uint8_t shamt = (instr >> 6) & 0x1F;
+    uint8_t funct = instr & 0x3F;
+
+    uint32_t valRs = regFile.readReg(rs);
+    uint32_t valRt = regFile.readReg(rt);
+    uint32_t aluResult = 0;
+
+    switch (ctrl.ALUOp) {
+    case ALUOp::ADD:
+        aluResult = valRs + valRt;
+        break;
+    case ALUOp::SUB:
+        aluResult = valRs - valRt;
+        break;
+    case ALUOp::AND:
+        aluResult = valRs & valRt;
+        break;
+    case ALUOp::OR:
+        aluResult = valRs | valRt;
+        break;
+    case ALUOp::SLT:
+        aluResult = (int32_t(valRs) < int32_t(valRt)) ? 1 : 0;
+        break;
+    case ALUOp::NOR:
+        aluResult = ~(valRs | valRt);
+        break;
+    case ALUOp::SLL:
+        aluResult = valRt << shamt;
+        break;
+    case ALUOp::SRL:
+        aluResult = valRt >> shamt;
+        break;
+    default:
+        aluResult = 0;
     }
-    PC = 0;  // Reset PC to start of program
+
+    if (ctrl.regWrite) {
+        regFile.writeReg(rd, aluResult);
+    }
+}
+
+void CPU::executeIType(uint32_t instr, const ControlSignals& ctrl) {
+    uint8_t rs = (instr >> 21) & 0x1F;
+    uint8_t rt = (instr >> 16) & 0x1F;
+    uint16_t imm = instr & 0xFFFF;
+    uint32_t signExtImm = signExtend16(imm);
+
+    uint32_t valRs = regFile.readReg(rs);
+
+    uint32_t aluInput2 = ctrl.aluSrc ? signExtImm : regFile.readReg(rt);
+
+    uint32_t aluResult = 0;
+    switch (ctrl.ALUOp) {
+    case ALUOp::ADD:
+        aluResult = valRs + aluInput2;
+        break;
+    case ALUOp::SUB:
+        aluResult = valRs - aluInput2;
+        break;
+    default:
+        aluResult = 0;
+        break;
+    }
+
+    if (ctrl.memRead) {
+        uint32_t memData = memory.readMem32Bit(aluResult);
+        if (ctrl.regWrite) {
+            regFile.writeReg(rt, memData);
+        }
+    }
+    else if (ctrl.memWrite) {
+        memory.writeMem32Bit(aluResult, regFile.readReg(rt));
+    }
+    else if (ctrl.branch) {
+        // BEQ: if rs == rt then branch
+        if (valRs == regFile.readReg(rt)) {
+            pc += 4 + (signExtImm << 2);
+            return;
+        }
+    }
+    else if (ctrl.regWrite) {
+        regFile.writeReg(rt, aluResult);
+    }
+
+    pc += 4;
+}
+
+void CPU::executeJType(uint32_t instr, const ControlSignals& ctrl) {
+    // Jump address is upper 4 bits of PC+4 concatenated with 26-bit address << 2
+    uint32_t address = instr & 0x03FFFFFF;
+    uint32_t target = (pc & 0xF0000000) | (address << 2);
+    pc = target;
+}
+
+std::array<uint32_t, 32> CPU::getRegisters() const {
+    return regFile.getAllRegisters();
 }
