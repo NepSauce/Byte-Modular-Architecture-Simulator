@@ -76,9 +76,9 @@ ControlSignals ControlUnit::generateControl(uint8_t opcode, uint8_t funct) {
             break;
 
         case 0x08: // addi
-            signals.regDst = false;       // destination register is rt
-            signals.aluSrc = true;        // use immediate as ALU second operand
-            signals.memToReg = false;     // result comes from ALU, not memory
+            signals.regDst = false;       
+            signals.aluSrc = true;        
+            signals.memToReg = false;     
             signals.regWrite = true;
             signals.memRead = false;
             signals.memWrite = false;

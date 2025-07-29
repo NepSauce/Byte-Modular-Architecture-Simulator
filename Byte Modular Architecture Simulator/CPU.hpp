@@ -9,8 +9,8 @@ public:
     CPU(MainMemory& mem, RegisterFile& rf);
 
     void reset();
-    void loadInstruction(uint32_t addr, uint32_t instruction); // Load hex instruction into memory
-    void runNextInstruction(); // Fetch, decode, execute 1 instruction
+    void loadInstruction(uint32_t addr, uint32_t instruction); 
+    void runNextInstruction(); 
     uint32_t getPC() const;
     std::array<uint32_t, 32> getRegisters() const;
 

@@ -7,7 +7,6 @@ static const uint32_t MEM_SIZE = 4096;
 
 class MainMemory {
 private:
-    // Simulates 4 KBs of memory
     uint8_t memoryCell[MEM_SIZE];
 
 public:

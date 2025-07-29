@@ -50,8 +50,10 @@ void RegisterFile::resetAllReg() {
 
 std::array<uint32_t, 32> RegisterFile::getAllRegisters() const {
     std::array<uint32_t, 32> regs{};
+
     for (int i = 0; i < 32; ++i) {
         regs[i] = readReg(i);
     }
+
     return regs;
 }

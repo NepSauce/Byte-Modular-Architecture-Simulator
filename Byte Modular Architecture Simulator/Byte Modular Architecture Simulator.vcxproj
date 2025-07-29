@@ -124,13 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ALU.hpp" />
-    <ClInclude Include="Assembler.hpp" />
     <ClInclude Include="ControlUnit.hpp" />
     <ClInclude Include="MainMemory.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ALU.cpp" />
-    <ClCompile Include="Assembler.cpp" />
     <ClCompile Include="ControlUnit.cpp" />
     <ClCompile Include="EntrancePoint.cpp" />
     <ClCompile Include="MainMemory.cpp" />
