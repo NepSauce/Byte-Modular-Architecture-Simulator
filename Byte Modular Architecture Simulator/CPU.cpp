@@ -40,9 +40,6 @@ void CPU::runNextInstruction() {
 
     ControlSignals ctrl = controlUnit.generateControl(opcode, funct);
 
-    // Debug output
-    std::cout << "PC: 0x" << std::hex << pc << " Instruction: 0x" << instr << std::dec << std::endl;
-
     if (opcode == 0x00) {
         // R-Type
         executeRType(instr, ctrl);
