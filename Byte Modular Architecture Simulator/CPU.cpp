@@ -60,39 +60,21 @@ void CPU::executeRType(uint32_t instr, const ControlSignals& ctrl) {
     uint8_t rt = (instr >> 16) & 0x1F;
     uint8_t rd = (instr >> 11) & 0x1F;
     uint8_t shamt = (instr >> 6) & 0x1F;
-    uint8_t funct = instr & 0x3F;
+    // funct not needed here because ctrl.ALUOp is already decoded
 
     uint32_t valRs = regFile.readReg(rs);
     uint32_t valRt = regFile.readReg(rt);
     uint32_t aluResult = 0;
 
-    switch (ctrl.ALUOp) {
-        case ALUOp::ADD:
-            aluResult = valRs + valRt;
-            break;
-        case ALUOp::SUB:
-            aluResult = valRs - valRt;
-            break;
-        case ALUOp::AND:
-            aluResult = valRs & valRt;
-            break;
-        case ALUOp::OR:
-            aluResult = valRs | valRt;
-            break;
-        case ALUOp::SLT:
-            aluResult = (int32_t(valRs) < int32_t(valRt)) ? 1 : 0;
-            break;
-        case ALUOp::NOR:
-            aluResult = ~(valRs | valRt);
-            break;
-        case ALUOp::SLL:
-            aluResult = valRt << shamt;
-            break;
-        case ALUOp::SRL:
-            aluResult = valRt >> shamt;
-            break;
-        default:
-            aluResult = 0;
+    ALU alu;
+
+    // For shift instructions, b is the shift amount (shamt),
+    // so we pass shamt as the second argument to ALU.
+    if (ctrl.ALUOp == ALUOp::SHL || ctrl.ALUOp == ALUOp::SHR || ctrl.ALUOp == ALUOp::SRA) {
+        aluResult = alu.execute(valRt, shamt, ctrl.ALUOp);
+    }
+    else {
+        aluResult = alu.execute(valRs, valRt, ctrl.ALUOp);
     }
 
     if (ctrl.regWrite) {
