@@ -25,8 +25,8 @@ A simple MIPS CPU simulator written in C++. It implements instruction fetch, dec
 
 #### Hex format
 
-0x20010005
-0x20020007
+0x20010005  
+0x20020007  
 0x00221820
 
 
