@@ -67,32 +67,32 @@ void CPU::executeRType(uint32_t instr, const ControlSignals& ctrl) {
     uint32_t aluResult = 0;
 
     switch (ctrl.ALUOp) {
-    case ALUOp::ADD:
-        aluResult = valRs + valRt;
-        break;
-    case ALUOp::SUB:
-        aluResult = valRs - valRt;
-        break;
-    case ALUOp::AND:
-        aluResult = valRs & valRt;
-        break;
-    case ALUOp::OR:
-        aluResult = valRs | valRt;
-        break;
-    case ALUOp::SLT:
-        aluResult = (int32_t(valRs) < int32_t(valRt)) ? 1 : 0;
-        break;
-    case ALUOp::NOR:
-        aluResult = ~(valRs | valRt);
-        break;
-    case ALUOp::SLL:
-        aluResult = valRt << shamt;
-        break;
-    case ALUOp::SRL:
-        aluResult = valRt >> shamt;
-        break;
-    default:
-        aluResult = 0;
+        case ALUOp::ADD:
+            aluResult = valRs + valRt;
+            break;
+        case ALUOp::SUB:
+            aluResult = valRs - valRt;
+            break;
+        case ALUOp::AND:
+            aluResult = valRs & valRt;
+            break;
+        case ALUOp::OR:
+            aluResult = valRs | valRt;
+            break;
+        case ALUOp::SLT:
+            aluResult = (int32_t(valRs) < int32_t(valRt)) ? 1 : 0;
+            break;
+        case ALUOp::NOR:
+            aluResult = ~(valRs | valRt);
+            break;
+        case ALUOp::SLL:
+            aluResult = valRt << shamt;
+            break;
+        case ALUOp::SRL:
+            aluResult = valRt >> shamt;
+            break;
+        default:
+            aluResult = 0;
     }
 
     if (ctrl.regWrite) {
